@@ -1,0 +1,32 @@
+syntax="proto3";
+
+package pb; 
+
+//couple msg start at 1; odd:Req, even:Respon
+//single msg start at 10000
+enum EGameMsgID
+{
+	EGMI_UNKNOW						= 0;		//
+
+	//couple msg start
+	EGMI_LOGIN_REQ					= 1;		// 
+	EGMI_LOGIN_RESPON				= 2;		// 
+	
+	EGMI_CONNECT_TO_GATE_REQ		= 3;
+	EGMI_CONNECT_TO_GATE_RESPON		= 4;
+
+	//single msg start
+	EGMI_SINGLE_MSG_START			= 10000;	// 
+}
+
+enum SERVER_TYPE {
+	START		= 0;
+
+	MACHINE		= 1;
+	LOGIN		= 2;
+	GATE		= 3;
+	CENTER		= 4;
+	LOGIC		= 5;
+
+	END			= 6;
+}
