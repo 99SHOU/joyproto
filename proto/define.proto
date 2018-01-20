@@ -19,14 +19,17 @@ enum EGameMsgID
 	EGMI_SINGLE_MSG_START			= 10000;	// 
 }
 
-enum SERVER_TYPE {
-	START		= 0;
-
-	MACHINE		= 1;
+enum NODE_TYPE {
+	MACHINE		= 0;
+	CENTER		= 1;
 	LOGIN		= 2;
 	GATE		= 3;
-	CENTER		= 4;
-	LOGIC		= 5;
+	GAME		= 4;
+	CLIENT		= 5;
+}
 
-	END			= 6;
+enum NODE_STATU {
+	NOT_READY	= 0;
+	READY		= 1;
+	OFF_LINE	= 2;
 }
