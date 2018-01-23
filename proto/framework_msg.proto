@@ -3,7 +3,12 @@ syntax="proto3";
 import "define.proto";
 package pb;
 
-message NodeRegister {
+message NodeRegisterReq {
+	NODE_TYPE	NodeType = 1;
+	uint32		NodeId = 2;
+}
+
+message NodeRegisterAck {
 	NODE_TYPE	NodeType = 1;
 	uint32		NodeId = 2;
 }

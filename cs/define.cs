@@ -8,20 +8,14 @@ namespace Pb
 {
 
     [global::ProtoBuf.ProtoContract()]
-    public enum EGameMsgID
+    public enum MsgID
     {
-        [global::ProtoBuf.ProtoEnum(Name = @"EGMI_UNKNOW")]
-        EgmiUnknow = 0,
-        [global::ProtoBuf.ProtoEnum(Name = @"EGMI_LOGIN_REQ")]
-        EgmiLoginReq = 1,
-        [global::ProtoBuf.ProtoEnum(Name = @"EGMI_LOGIN_RESPON")]
-        EgmiLoginRespon = 2,
-        [global::ProtoBuf.ProtoEnum(Name = @"EGMI_CONNECT_TO_GATE_REQ")]
-        EgmiConnectToGateReq = 3,
-        [global::ProtoBuf.ProtoEnum(Name = @"EGMI_CONNECT_TO_GATE_RESPON")]
-        EgmiConnectToGateRespon = 4,
-        [global::ProtoBuf.ProtoEnum(Name = @"EGMI_SINGLE_MSG_START")]
-        EgmiSingleMsgStart = 10000,
+        [global::ProtoBuf.ProtoEnum(Name = @"INVALID")]
+        Invalid = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"FWM_NODE_REGISTER_REQ")]
+        FwmNodeRegisterReq = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"FWM_NODE_REGISTER_ACK")]
+        FwmNodeRegisterAck = 2,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"NODE_TYPE")]
@@ -31,12 +25,12 @@ namespace Pb
         Machine = 0,
         [global::ProtoBuf.ProtoEnum(Name = @"CENTER")]
         Center = 1,
-        [global::ProtoBuf.ProtoEnum(Name = @"LOGIN")]
-        Login = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"GAME")]
+        Game = 2,
         [global::ProtoBuf.ProtoEnum(Name = @"GATE")]
         Gate = 3,
-        [global::ProtoBuf.ProtoEnum(Name = @"GAME")]
-        Game = 4,
+        [global::ProtoBuf.ProtoEnum(Name = @"LOGIN")]
+        Login = 4,
         [global::ProtoBuf.ProtoEnum(Name = @"CLIENT")]
         Client = 5,
     }

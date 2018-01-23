@@ -8,7 +8,18 @@ namespace Pb
 {
 
     [global::ProtoBuf.ProtoContract()]
-    public partial class NodeRegister
+    public partial class NodeRegisterReq
+    {
+        [global::ProtoBuf.ProtoMember(1)]
+        public NodeType NodeType { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2)]
+        public uint NodeId { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class NodeRegisterAck
     {
         [global::ProtoBuf.ProtoMember(1)]
         public NodeType NodeType { get; set; }

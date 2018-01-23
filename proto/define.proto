@@ -2,29 +2,19 @@ syntax="proto3";
 
 package pb; 
 
-//couple msg start at 1; odd:Req, even:Respon
-//single msg start at 10000
-enum EGameMsgID
+enum MsgID
 {
-	EGMI_UNKNOW						= 0;		//
-
-	//couple msg start
-	EGMI_LOGIN_REQ					= 1;		// 
-	EGMI_LOGIN_RESPON				= 2;		// 
-	
-	EGMI_CONNECT_TO_GATE_REQ		= 3;
-	EGMI_CONNECT_TO_GATE_RESPON		= 4;
-
-	//single msg start
-	EGMI_SINGLE_MSG_START			= 10000;	// 
+	INVALID					= 0;
+	FWM_NODE_REGISTER_REQ	= 1;	//frameword node register req
+	FWM_NODE_REGISTER_ACK	= 2;	//frameword node register ack
 }
 
 enum NODE_TYPE {
 	MACHINE		= 0;
 	CENTER		= 1;
-	LOGIN		= 2;
+	GAME		= 2;
 	GATE		= 3;
-	GAME		= 4;
+	LOGIN		= 4;
 	CLIENT		= 5;
 }
 
