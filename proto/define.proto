@@ -4,22 +4,29 @@ package pb;
 
 enum MsgID
 {
-	INVALID					= 0;
-	FWM_NODE_REGISTER_REQ	= 1;	//frameword node register req
-	FWM_NODE_REGISTER_ACK	= 2;	//frameword node register ack
+	FWM_NODE_REGISTER_REQ = 0;
+	FWM_NODE_REGISTER_ACK = 1;
+	FWM_SET_NODE_STATU = 2;
+	FWM_GAME_NODE_LIST_REQ = 3;
+	FWM_GAME_NODE_LIST_ACK = 4;
 }
 
 enum NODE_TYPE {
-	MACHINE		= 0;
-	CENTER		= 1;
-	GAME		= 2;
-	GATE		= 3;
-	LOGIN		= 4;
-	CLIENT		= 5;
+	INVALID = 0;
+	MACHINE = 1;
+	CENTER = 2;
+	GAME = 3;
+	GATE = 4;
+	LOGIN = 5;
+	CLIENT = 6;
 }
 
 enum NODE_STATU {
-	NOT_READY	= 0;
-	READY		= 1;
-	OFF_LINE	= 2;
+	NOT_READY = 0;
+	READY = 1;
+	OFF_LINE = 2;
+}
+
+enum NODE_INFO {
+	SERVER_PORT = 0;
 }

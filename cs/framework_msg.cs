@@ -14,7 +14,13 @@ namespace Pb
         public NodeType NodeType { get; set; }
 
         [global::ProtoBuf.ProtoMember(2)]
+        public NodeStatu NodeStatu { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3)]
         public uint NodeId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(4)]
+        public uint ServerPort { get; set; }
 
     }
 
@@ -25,7 +31,49 @@ namespace Pb
         public NodeType NodeType { get; set; }
 
         [global::ProtoBuf.ProtoMember(2)]
+        public NodeStatu NodeStatu { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3)]
         public uint NodeId { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class SetNodeStatu
+    {
+        [global::ProtoBuf.ProtoMember(1)]
+        public NodeStatu NodeStatu { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class NodeInfo
+    {
+        [global::ProtoBuf.ProtoMember(1)]
+        public NodeType NodeType { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2)]
+        public NodeStatu NodeStatu { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3)]
+        public uint NodeId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(4)]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Addr { get; set; } = "";
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GameNodeListReq
+    {
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GameNodeListAck
+    {
+        [global::ProtoBuf.ProtoMember(1)]
+        public global::System.Collections.Generic.List<NodeInfo> NodeInfos { get; } = new global::System.Collections.Generic.List<NodeInfo>();
 
     }
 

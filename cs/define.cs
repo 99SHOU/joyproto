@@ -10,29 +10,35 @@ namespace Pb
     [global::ProtoBuf.ProtoContract()]
     public enum MsgID
     {
-        [global::ProtoBuf.ProtoEnum(Name = @"INVALID")]
-        Invalid = 0,
         [global::ProtoBuf.ProtoEnum(Name = @"FWM_NODE_REGISTER_REQ")]
-        FwmNodeRegisterReq = 1,
+        FwmNodeRegisterReq = 0,
         [global::ProtoBuf.ProtoEnum(Name = @"FWM_NODE_REGISTER_ACK")]
-        FwmNodeRegisterAck = 2,
+        FwmNodeRegisterAck = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"FWM_SET_NODE_STATU")]
+        FwmSetNodeStatu = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"FWM_GAME_NODE_LIST_REQ")]
+        FwmGameNodeListReq = 3,
+        [global::ProtoBuf.ProtoEnum(Name = @"FWM_GAME_NODE_LIST_ACK")]
+        FwmGameNodeListAck = 4,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"NODE_TYPE")]
     public enum NodeType
     {
+        [global::ProtoBuf.ProtoEnum(Name = @"INVALID")]
+        Invalid = 0,
         [global::ProtoBuf.ProtoEnum(Name = @"MACHINE")]
-        Machine = 0,
+        Machine = 1,
         [global::ProtoBuf.ProtoEnum(Name = @"CENTER")]
-        Center = 1,
+        Center = 2,
         [global::ProtoBuf.ProtoEnum(Name = @"GAME")]
-        Game = 2,
+        Game = 3,
         [global::ProtoBuf.ProtoEnum(Name = @"GATE")]
-        Gate = 3,
+        Gate = 4,
         [global::ProtoBuf.ProtoEnum(Name = @"LOGIN")]
-        Login = 4,
+        Login = 5,
         [global::ProtoBuf.ProtoEnum(Name = @"CLIENT")]
-        Client = 5,
+        Client = 6,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"NODE_STATU")]
@@ -44,6 +50,13 @@ namespace Pb
         Ready = 1,
         [global::ProtoBuf.ProtoEnum(Name = @"OFF_LINE")]
         OffLine = 2,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"NODE_INFO")]
+    public enum NodeInfo
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"SERVER_PORT")]
+        ServerPort = 0,
     }
 
 }

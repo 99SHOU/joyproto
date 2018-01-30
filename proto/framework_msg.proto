@@ -5,10 +5,32 @@ package pb;
 
 message NodeRegisterReq {
 	NODE_TYPE	NodeType = 1;
-	uint32		NodeId = 2;
+	NODE_STATU	NodeStatu = 2;
+	uint32		NodeId = 3;
+	uint32		ServerPort = 4;
 }
 
 message NodeRegisterAck {
 	NODE_TYPE	NodeType = 1;
-	uint32		NodeId = 2;
+	NODE_STATU	NodeStatu = 2;
+	uint32		NodeId = 3;
 }
+
+message SetNodeStatu {
+	NODE_STATU NodeStatu = 1;
+}
+
+message NodeInfo {
+	NODE_TYPE	NodeType = 1;
+	NODE_STATU	NodeStatu = 2;
+	uint32		NodeId = 3;
+	string		Addr = 4;
+}
+
+message GameNodeListReq {
+}
+
+message GameNodeListAck {
+	repeated NodeInfo NodeInfos = 1;
+}
+
