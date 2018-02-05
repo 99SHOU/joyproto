@@ -20,6 +20,8 @@ namespace Pb
         FwmGameNodeListReq = 3,
         [global::ProtoBuf.ProtoEnum(Name = @"FWM_GAME_NODE_LIST_ACK")]
         FwmGameNodeListAck = 4,
+        [global::ProtoBuf.ProtoEnum(Name = @"FWM_GAME_MSG_TRANSFER")]
+        FwmGameMsgTransfer = 999,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"NODE_TYPE")]
@@ -52,11 +54,17 @@ namespace Pb
         OffLine = 2,
     }
 
-    [global::ProtoBuf.ProtoContract(Name = @"NODE_INFO")]
-    public enum NodeInfo
+    [global::ProtoBuf.ProtoContract(Name = @"AGENT_INFO_KEY")]
+    public enum AgentInfoKey
     {
-        [global::ProtoBuf.ProtoEnum(Name = @"SERVER_PORT")]
-        ServerPort = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"NODE_PORT")]
+        NodePort = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"ACCOUNT")]
+        Account = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"CHARACTER_ID")]
+        CharacterId = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"GAME_NODE_ID")]
+        GameNodeId = 3,
     }
 
 }

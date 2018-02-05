@@ -20,7 +20,7 @@ namespace Pb
         public uint NodeId { get; set; }
 
         [global::ProtoBuf.ProtoMember(4)]
-        public uint ServerPort { get; set; }
+        public uint NodePort { get; set; }
 
     }
 
@@ -74,6 +74,20 @@ namespace Pb
     {
         [global::ProtoBuf.ProtoMember(1)]
         public global::System.Collections.Generic.List<NodeInfo> NodeInfos { get; } = new global::System.Collections.Generic.List<NodeInfo>();
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GameMsgTransfer
+    {
+        [global::ProtoBuf.ProtoMember(1)]
+        public ulong CharacterId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2)]
+        public byte[] MsgId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3)]
+        public byte[] MsgBody { get; set; }
 
     }
 

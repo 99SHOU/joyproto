@@ -9,6 +9,8 @@ enum MsgID
 	FWM_SET_NODE_STATU = 2;
 	FWM_GAME_NODE_LIST_REQ = 3;
 	FWM_GAME_NODE_LIST_ACK = 4;
+
+	FWM_GAME_MSG_TRANSFER = 999;
 }
 
 enum NODE_TYPE {
@@ -27,6 +29,12 @@ enum NODE_STATU {
 	OFF_LINE = 2;
 }
 
-enum NODE_INFO {
-	SERVER_PORT = 0;
+enum AGENT_INFO_KEY {
+	//use for server
+	NODE_PORT = 0;//the port node listen
+
+	//use for client
+	ACCOUNT = 1;//client account
+	CHARACTER_ID = 2;//client character id
+	GAME_NODE_ID = 3;//the node id of character life in
 }

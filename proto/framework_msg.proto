@@ -7,7 +7,7 @@ message NodeRegisterReq {
 	NODE_TYPE	NodeType = 1;
 	NODE_STATU	NodeStatu = 2;
 	uint32		NodeId = 3;
-	uint32		ServerPort = 4;
+	uint32		NodePort = 4;
 }
 
 message NodeRegisterAck {
@@ -34,3 +34,8 @@ message GameNodeListAck {
 	repeated NodeInfo NodeInfos = 1;
 }
 
+message GameMsgTransfer {
+	uint64 CharacterId = 1;
+	bytes MsgId = 2;
+	bytes MsgBody = 3;
+}
